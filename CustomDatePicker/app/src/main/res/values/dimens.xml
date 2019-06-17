@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="bklib_toolbar_height">44dp</dimen>
+    <dimen name="bklib_tab_layout_height">50dp</dimen>
+    <dimen name="bklib_default_button_height">36dp</dimen>
+
+    <dimen name="bklib_button_corner_radius">80dp</dimen>
+
+    <!-- RegisterLoan View -->
+    <dimen name="bklib_loan_pmi_progress_width">200dp</dimen>
+    <dimen name="bklib_loan_pmi_progress_margin_left_max">165dp</dimen>
+    <dimen name="bklib_loan_pmi_progress_margin_left">6dp</dimen>
+    <dimen name="bklib_loan_pmi_progress_text_width">32dp</dimen>
+
+    <!-- market -->
+    <dimen name="bklib_market_map_height">300dp</dimen>
+    <dimen name="bklib_mapmarker_size">18dp</dimen>
+    <dimen name="bklib_mapmarker_border_size">16dp</dimen>
+    <dimen name="bklib_market_list_comparable_sales_icon_size">30dp</dimen>
+    <dimen name="bklib_market_list_schools_icon_size">40dp</dimen>
+    <dimen name="bklib_market_card_width">300dp</dimen>
+
+    <!-- My Loans -->
+    <dimen name="bklib_my_loans_margin">26dp</dimen>
+
+</resources>

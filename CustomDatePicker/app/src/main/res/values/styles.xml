@@ -1,0 +1,112 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- ======================== -->
+    <!-- Button -->
+    <!-- ======================== -->
+
+    <!-- Base -->
+    <style name="bklibButtonLabel_base">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="bklibButtonLabel_override" parent="bklibButtonLabel_base" />
+
+    <!-- Usage -->
+    <style name="bklibButtonLabel" parent="bklibButtonLabel_override">
+        <item name="android:textColor">@color/bklibTextAlt</item>
+    </style>
+
+    <style name="bklibButtonLabelSecondary" parent="bklibButtonLabel_override">
+        <item name="android:textColor">@color/bklibTextPrimary</item>
+    </style>
+
+    <style name="bklibButtonLabelAlt" parent="bklibButtonLabel_override">
+        <item name="android:textColor">@color/bklibTextAlt</item>
+    </style>
+
+    <!-- ======================== -->
+    <!-- Text Button -->
+    <!-- ======================== -->
+
+    <!-- Base -->
+    <style name="bklibTextButton_base">
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="bklibTextButton_override" parent="bklibTextButton_base" />
+
+    <!-- Usage -->
+    <style name="bklibTextButton" parent="bklibTextButton_override">
+        <item name="android:textColor">@color/bklibTextPrimary</item>
+    </style>
+
+    <style name="bklibTextButtonAlt" parent="bklibTextButton_override">
+        <item name="android:textColor">@color/bklibTextAlt</item>
+    </style>
+
+    <!-- Buttons Styles -->
+    <!-- ======================== -->
+    <style name="BklibButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/bklib_default_button_height</item>
+    </style>
+
+    <style name="BklibButtonStylePrimary" parent="BklibButtonStyle">
+        <item name="android:textAppearance">@style/bklibButtonLabel</item>
+        <item name="android:background">@drawable/bklib_btn_state_primary</item>
+    </style>
+
+    <style name="BklibButtonStyleSecondary" parent="BklibButtonStyle">
+        <item name="android:textAppearance">@style/bklibButtonLabelSecondary</item>
+        <!--<item name="android:background">@drawable/bklib_btn_state_secondary</item>-->
+    </style>
+
+    <style name="BklibButtonStyleAlt" parent="BklibButtonStyle">
+        <item name="android:textAppearance">@style/bklibButtonLabelAlt</item>
+        <item name="android:background">@drawable/bklib_btn_state_alt</item>
+    </style>
+
+    <style name="BklibButtonStyleWarning" parent="BklibButtonStylePrimary">
+        <item name="android:background">@drawable/bklib_btn_state_warning</item>
+    </style>
+
+    <style name="BklibButtonStyleError" parent="BklibButtonStylePrimary">
+        <item name="android:background">@drawable/bklib_btn_state_error</item>
+    </style>
+
+    <style name="BklibTextButtonStyle" parent="BklibButtonStyle">
+        <item name="android:textAppearance">@style/bklibTextButton</item>
+        <item name="android:background">@drawable/bklib_btn_state_text_btn</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="BklibTextButtonStyleAlt" parent="BklibButtonStyle">
+        <item name="android:textAppearance">@style/bklibTextButtonAlt</item>
+        <item name="android:background">@drawable/bklib_btn_text_btn_state_alt</item>
+    </style>
+
+    <style name="BklibDatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/bklibControl</item>
+        <item name="colorPrimaryDark">@color/bklibControl</item>
+        <item name="colorAccent">@color/bklibControl</item>
+    </style>
+</resources>

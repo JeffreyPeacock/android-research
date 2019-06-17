@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Palette -->
+    <!-- ======================== -->
+    <color name="topaz">#18BC9B</color>
+    <color name="topaz_30">#4d1abc9c</color>
+    <color name="topaz_dark">#118970</color>
+
+    <color name="dark_coral">#CB5656</color>
+    <color name="dark_coral_30">#4DCB5656</color>
+    <color name="dark_coral_dark">#984040</color>
+
+    <color name="squash">#E6AD2C</color>
+    <color name="squash_30">#4DE6AD2C</color>
+    <color name="squash_dark">#886619</color>
+
+    <color name="grey">#B1B1B1</color>
+    <color name="grey_30">#B1B1B1</color>
+    <color name="very_light_grey">#EFEFEF</color>
+    <color name="darkish_grey">#707070</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_4">#0AFFFFFF</color>
+    <color name="white_18">#2EFFFFFF</color>
+    <color name="white_27">#45FFFFFF</color>
+
+    <color name="blue">#4675bf</color>
+
+    <color name="black">#000000</color>
+    <color name="black_30">#4D000000</color>
+
+    <color name="colorPrimary">@color/topaz</color>
+    <color name="colorPrimaryDark">@color/topaz</color>
+    <color name="colorAccent">@color/topaz</color>
+
+    <color name="bklibSunYellow">#f8e71c</color>
+
+    <color name="gunmetal">#485260</color>
+
+    <!-- States -->
+    <!-- ======================== -->
+    <color name="bklibPrimary">@color/topaz</color>
+    <color name="bklibPrimaryDisabled">@color/topaz_30</color>
+    <color name="bklibPrimarySelected">@color/topaz_dark</color>
+
+    <color name="bklibPrimaryAlt">@color/white</color>
+    <color name="bklibPrimaryAltDisabled">@color/white_27</color>
+    <color name="bklibPrimaryAltSelected">@color/grey</color>
+
+    <color name="bklibAccent">@color/squash</color>
+    <color name="bklibAccentDisabled">@color/squash_30</color>
+    <color name="bklibAccentSelected">@color/squash_dark</color>
+
+    <color name="bklibNeutral">@color/very_light_grey</color>
+
+    <color name="bklibError">@color/dark_coral</color>
+    <color name="bklibErrorDisabled">@color/dark_coral_30</color>
+    <color name="bklibErrorSelected">@color/dark_coral_dark</color>
+
+    <color name="bklibWarning">@color/squash</color>
+    <color name="bklibWarningDisabled">@color/squash_30</color>
+    <color name="bklibWarningSelected">@color/squash_dark</color>
+
+    <color name="bklibSuccess">@color/topaz</color>
+    <color name="bklibSuccessDisabled">@color/topaz_30</color>
+    <color name="bklibSuccessSelected">@color/topaz_dark</color>
+
+    <!-- Background -->
+    <!-- ======================== -->
+    <color name="bklibBackground">@color/white</color>
+    <color name="bklibBackgroundAlt">@color/bklibPrimary</color>
+
+    <!-- Overlay -->
+    <!-- ======================== -->
+    <color name="bklibOverlay">@color/black_30</color>
+
+    <!-- Borders -->
+    <!-- ======================== -->
+    <color name="bklibBorder">@color/grey</color>
+    <color name="bklibBorderAlt">@color/white_27</color>
+    <color name="bklibDivider">@color/very_light_grey</color>
+    <color name="bklibSectionDivider">@color/bklibBorder</color>
+
+    <!-- Text -->
+    <!-- ======================== -->
+    <color name="bklibText">@color/black</color>
+    <color name="bklibTextAlt">@color/white</color>
+    <color name="bklibTextPrimary">@color/bklibPrimary</color>
+    <color name="bklibTextHint">@color/grey</color>
+
+    <!-- Icons -->
+    <!-- ======================== -->
+    <color name="bklibIconTint">@color/bklibPrimary</color>
+    <color name="bklibIconTintAlt">@color/bklibPrimaryAlt</color>
+
+    <!-- Buttons -->
+    <!-- ======================== -->
+    <color name="bklibButtonPrimary">@color/bklibPrimary</color>
+    <color name="bklibButtonPrimaryText">@color/bklibTextAlt</color>
+    <color name="bklibButtonPrimaryDisabled">@color/bklibPrimaryDisabled</color>
+    <color name="bklibButtonPrimarySelected">@color/bklibPrimarySelected</color>
+
+    <color name="bklibButtonSecondary">@color/bklibPrimaryAlt</color>
+    <color name="bklibButtonSecondaryText">@color/bklibTextPrimary</color>
+    <color name="bklibButtonSecondaryDisabled">@color/bklibPrimaryAltDisabled</color>
+    <color name="bklibButtonSecondarySelected">@color/bklibPrimaryAltSelected</color>
+
+    <!-- Controls -->
+    <!-- ======================== -->
+    <color name="bklibControl">@color/bklibPrimary</color>
+    <color name="bklibControlDisabled">@color/bklibPrimaryDisabled</color>
+    <color name="bklibControlSelected">@color/bklibPrimarySelected</color>
+
+    <color name="bklibControlAlt">@color/bklibPrimaryAlt</color>
+    <color name="bklibControlAltDisabled">@color/bklibPrimaryAltDisabled</color>
+    <color name="bklibControlAltSelected">@color/bklibPrimaryAltSelected</color>
+
+    <!-- UI specific -->
+    <!-- ======================== -->
+    <!-- Dashboard -->
+    <color name="bklibDashboardAddressFill">@color/white_4</color>
+    <color name="bklibDashboardAlertFill">@color/white_18</color>
+    <color name="bklibDashboardAlertBg">#18AB8F</color>
+
+    <!-- Cards -->
+    <color name="bklibCardBackground">@color/white</color>
+    <color name="bklibCardBackgroundAlt">@color/bklibPrimary</color>
+
+    <color name="bklibMapBg">@color/grey_30</color>
+
+    <!-- Charts -->
+    <color name="bklibCurtailmentChartSelected">@color/bklibPrimary</color>
+    <color name="bklibCurtailmentChartLabel">@color/bklibText</color>
+    <color name="bklibCurtailmentChartLabelSelected">@color/bklibTextAlt</color>
+    <color name="bklibCurtailmentChartValue">@color/bklibText</color>
+    <color name="bklibCurtailmentChartValueSelected">@color/bklibPrimary</color>
+    <color name="bklibCurtailmentChartGuideline">@color/bklibPrimary</color>
+    <color name="bklibCurtailmentChartLine">@color/bklibPrimary</color>
+    <color name="bklibCurtailmentChartFillStart">@color/bklibPrimary</color>
+    <color name="bklibCurtailmentChartFillEnd">@color/bklibBackground</color>
+
+    <color name="bklibLoanOverviewChartInterest">@color/bklibPrimary</color>
+    <color name="bklibLoanOverviewChartPrincipal">@color/squash</color>
+    <color name="bklibLoanOverviewChartLabel">@color/bklibText</color>
+
+    <color name="bklibMedianChartBar">@color/bklibNeutral</color>
+    <color name="bklibMedianChartBarSelected">@color/bklibPrimary</color>
+    <color name="bklibMedianChartText">@color/bklibText</color>
+    <color name="bklibMedianChartTextSelected">@color/bklibText</color>
+
+    <color name="bklibPriceValueChartBar">@color/bklibAccent</color>
+    <color name="bklibPriceValueChartLine">@color/bklibPrimary</color>
+    <color name="bklibPriceValueChartDot">@color/bklibPrimary</color>
+    <color name="bklibPriceValueChartGuideline">@color/bklibDivider</color>
+    <color name="bklibPriceValueChartLabel">@color/bklibText</color>
+
+    <color name="bklibLoanPmiProgressBackground">@color/bklibAccentDisabled</color>
+    <color name="bklibLoanPmiProgressFill">@color/bklibAccent</color>
+
+    <!-- Market markers -->
+    <color name="marketMarker">@color/gunmetal</color>
+
+    <!-- Linkified Text -->
+    <color name="bklibLinkifiedText">@color/blue</color>
+
+</resources>
