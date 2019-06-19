@@ -1,55 +1,56 @@
 package com.inspiringapps.ui.customdatepicker.widget;
 
-import android.widget.NumberPicker;
+import androidx.annotation.NonNull;
+
+import com.shawnlin.numberpicker.NumberPicker;
 
 import java.text.DecimalFormatSymbols;
+import java.util.Formatter;
 import java.util.Locale;
 
 /**
- * Copy of {android.widget.NumberPicker.TwoDigitFormatter}, modified
- * so that it doesn't use libcore.
+ * A class to format two-digit minutes strings like "01".
  *
- * Use a custom NumberPicker formatting callback to use two-digit minutes
- * strings like "01". Keeping a static formatter etc. is the most efficient
- * way to do this; it avoids creating temporary objects on every call to
- * format().
+ * Derived from {android.widget.NumberPicker.TwoDigitFormatter}
  */
-public class TwoDigitFormatter implements NumberPicker.Formatter {
-    final StringBuilder mBuilder = new StringBuilder();
+public class TwoDigitFormatter
+    implements NumberPicker.Formatter
+{
+    private final Object[] args = new Object[1];
+    private final StringBuilder sb = new StringBuilder();
 
-    char mZeroDigit;
-    java.util.Formatter mFmt;
+    private char zeroDigit;
+    private Formatter formatter;
 
-    final Object[] mArgs = new Object[1];
-
-    public TwoDigitFormatter() {
-        final Locale locale = Locale.getDefault();
-        init(locale);
+    TwoDigitFormatter() {
+        init(Locale.getDefault());
     }
 
-    private void init(Locale locale) {
-        mFmt = createFormatter(locale);
-        mZeroDigit = getZeroDigit(locale);
+    private void init(@NonNull final Locale locale) {
+        formatter = createFormatter(locale);
+        zeroDigit = getZeroDigit(locale);
     }
 
-    public String format(int value) {
+    @NonNull
+    @Override
+    public String format(final int value) {
         final Locale currentLocale = Locale.getDefault();
-        if (mZeroDigit != getZeroDigit(currentLocale)) {
+        if (zeroDigit != getZeroDigit(currentLocale)) {
             init(currentLocale);
         }
-        mArgs[0] = value;
-        mBuilder.delete(0, mBuilder.length());
-        mFmt.format("%02d", mArgs);
-        return mFmt.toString();
+        args[0] = value;
+        sb.delete(0, sb.length());
+        formatter.format("%02d", args);
+        return formatter.toString();
     }
 
-    private static char getZeroDigit(Locale locale) {
+    private static char getZeroDigit(@NonNull final Locale locale) {
         // The original TwoDigitFormatter directly referenced LocaleData's value. Instead,
         // we need to use the public DecimalFormatSymbols API.
         return DecimalFormatSymbols.getInstance(locale).getZeroDigit();
     }
 
-    private java.util.Formatter createFormatter(Locale locale) {
-        return new java.util.Formatter(mBuilder, locale);
+    private java.util.Formatter createFormatter(@NonNull final Locale locale) {
+        return new java.util.Formatter(sb, locale);
     }
 }

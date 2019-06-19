@@ -1,15 +1,13 @@
 package com.inspiringapps.ui.customdatepicker;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.inspiringapps.ui.customdatepicker.widget.CustomDatePicker;
 import com.inspiringapps.ui.customdatepicker.widget.CustomDatePickerDialog;
@@ -18,12 +16,16 @@ import com.inspiringapps.ui.customdatepicker.widget.CustomDatePickerDialogBuilde
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-import java.util.Locale;
 
 public class MainActivity
     extends AppCompatActivity
     implements CustomDatePickerDialog.OnDateSetListener
 {
+    private static final String LOGTAG = "MainActivity";
+
+    private Calendar selectedDate;
+    private SimpleDateFormat formatter = new SimpleDateFormat("yyyy.MM.dd");
+
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +39,7 @@ public class MainActivity
                                    final int year,
                                    final int monthOfYear,
                                    final int dayOfMonth) {
+        selectedDate = new GregorianCalendar(year, monthOfYear, dayOfMonth);
     }
 
 
@@ -45,9 +48,20 @@ public class MainActivity
         new CustomDatePickerDialogBuilder()
                 .context(MainActivity.this)
                 .callback(MainActivity.this)
+                .dialogTheme(R.style.BklibDialogStyle)
+                .setPositiveButtonListener(v -> okButtonClicked(v))
+                .setNegativeButtonListener(v -> cancelButtonClicked(v))
                 .spinnerTheme(spinnerTheme)
                 .defaultDate(year, monthOfYear, dayOfMonth)
                 .build()
                 .show();
+    }
+
+    private void okButtonClicked(@NonNull final View view) {
+        Log.d(LOGTAG, "okButtonClicked().selectedDate="+formatter.format(selectedDate.getTime()));
+
+    }
+    private void cancelButtonClicked(@NonNull final View view) {
+        Log.d(LOGTAG, "cancelButtonClicked().selectedDate="+formatter.format(selectedDate.getTime()));
     }
 }

@@ -1,8 +1,5 @@
 package com.inspiringapps.ui.customdatepicker.widget;
 
-/**
- * Created by David on 25/11/2017.
- */
 public interface OnDateChangedListener {
     /**
      * Called upon a date change.
